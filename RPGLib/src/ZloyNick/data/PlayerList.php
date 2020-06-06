@@ -32,6 +32,7 @@ final class PlayerList
     {
         $class = BaseRPGServer::getPlayerClass();
         static::$list[strtolower($player->getName())] = new $class($player);
+        //TODO: initialise
     }
 
 }
