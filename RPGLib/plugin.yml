@@ -1,0 +1,4 @@
+name: RPGLib
+main: ZloyNick\RPGLib\main\RPGServerLoader
+version: 0.0.1
+api: 3.13.0
