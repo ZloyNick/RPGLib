@@ -6,17 +6,25 @@ namespace ZloyNick\RPGLib\main;
 
 use pocketmine\plugin\PluginBase as LoaderBase;
 use ZloyNick\RPGLib\event\package\SoftInitEvent;
+use ZloyNick\RPGLib\interfaces\main\IRPGServer;
 
 class RPGServerLoader extends LoaderBase
 {
     /** @var null|RPGServerLoader */
     private static $main = null;
 
-    /** @var null */
+    /** @var null|IRPGServer */
     private $software = null;
 
-    public function onEnable()
+    /**
+     * Plugin enabling
+     *
+     * @return void
+     */
+    public function onEnable() : void
     {
+        static::$main = $this;
+
         $ev = new SoftInitEvent(BaseRPGServer::class);
         $ev->call();
 
@@ -24,9 +32,22 @@ class RPGServerLoader extends LoaderBase
         $this->software = new $class($this);
     }
 
-    public function onDisable()
+    /**
+     * @return IRPGServer
+     */
+    public function getRPG() : IRPGServer
     {
+        return $this->software;
+    }
 
+    /**
+     * Plugin disabling
+     *
+     * @return void
+     */
+    public function onDisable() : void
+    {
+        $this->software->close();
     }
 
 }

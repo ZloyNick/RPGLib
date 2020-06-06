@@ -15,6 +15,7 @@ use ZloyNick\RPGLib\interfaces\main\IRPGServer;
 use ZloyNick\RPGLib\error\event\EventException;
 
 use function is_subclass_of;
+use function get_class;
 
 class SoftInitEvent extends Event
 {
