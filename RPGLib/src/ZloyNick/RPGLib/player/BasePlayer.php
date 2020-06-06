@@ -16,4 +16,20 @@ class BasePlayer extends IPlayer
     {
 
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function spawn(): void
+    {
+        // TODO: Implement spawn() method.
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function logOut(): void
+    {
+        // TODO: Implement logOut() method.
+    }
 }

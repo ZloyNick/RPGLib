@@ -12,6 +12,7 @@ use function strtolower;
 final class PlayerList
 {
 
+    /** @var IPlayer[] */
     private static $list = [];
 
     /**
@@ -30,9 +31,20 @@ final class PlayerList
     public static function addPlayer(PocketMine_PLayer $player): void
     {
         $class = BaseRPGServer::getPlayerClass();
-        /** @var IPlayer $player */
         $player = &(static::$list[strtolower($player->getName())] = new $class($player));
+        /** @var IPlayer $player */
         $player->init();
+    }
+
+    /**
+     * @param string $name
+     */
+
+    public static function removePlayer(string $name) : void
+    {
+        $player = static::$list[strtolower($name)];
+        $player->logOut();
+        unset(static::$list[strtolower($name)]);
     }
 
 }

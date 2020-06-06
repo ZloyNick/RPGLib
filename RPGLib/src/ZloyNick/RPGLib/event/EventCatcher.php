@@ -9,6 +9,8 @@ use ZloyNick\data\LangContainer;
 use ZloyNick\data\PlayerList;
 use ZloyNick\RPGLib\interfaces\player\IPlayer;
 use ZloyNick\RPGLib\main\RPGServerLoader;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerQuitEvent;
 
 class EventCatcher implements Listener
 {
@@ -49,12 +51,29 @@ class EventCatcher implements Listener
     }
 
     /**
+     * @param PlayerJoinEvent $event
+     */
+    public function callPlayerJoinEvent(PlayerJoinEvent $event) : void
+    {
+        $this->getPlayerFromObject($event->getPlayer())->spawn();
+    }
+
+    /**
      * @param PocketMine_PLayer $player
      * @return IPlayer|null
      */
     public function getPlayerFromObject(PocketMine_PLayer $player): ?IPlayer
     {
         return PlayerList::getPlayer($player->getName());
+    }
+
+    /**
+     * @param PlayerQuitEvent $event
+     * @return void
+     */
+    public function callPlayerQuitEvent(PlayerQuitEvent $event) : void
+    {
+        PlayerList::removePlayer($event->getPlayer()->getName());
     }
 
 }
