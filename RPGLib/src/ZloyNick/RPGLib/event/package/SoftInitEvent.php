@@ -25,7 +25,7 @@ class SoftInitEvent extends Event
 
     /**
      * SoftInitEvent constructor.
-     * @param IRPGServer $package
+     * @param string $package
      */
     public function __construct(string $package)
     {
