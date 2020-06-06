@@ -11,11 +11,10 @@ declare(strict_types=1);
 namespace ZloyNick\RPGLib\event\package;
 
 use pocketmine\event\Event;
-use ZloyNick\RPGLib\interfaces\main\IRPGServer;
 use ZloyNick\RPGLib\error\event\EventException;
-
-use function is_subclass_of;
+use ZloyNick\RPGLib\interfaces\main\IRPGServer;
 use function get_class;
+use function is_subclass_of;
 
 class SoftInitEvent extends Event
 {
@@ -47,11 +46,10 @@ class SoftInitEvent extends Event
      * @param string $className
      * @throws EventException
      */
-    public function setPackageClass(string $className) : void
+    public function setPackageClass(string $className): void
     {
-        if(!is_subclass_of(IRPGServer::class, $className))
-        {
-            throw new EventException('Parameter 1 of function SoftInitEvent::setPackageClass() must be instance of '.get_class(IRPGServer::class).'!\n'.$className.' given.');
+        if (!is_subclass_of(IRPGServer::class, $className)) {
+            throw new EventException('Parameter 1 of function SoftInitEvent::setPackageClass() must be instance of ' . get_class(IRPGServer::class) . '!\n' . $className . ' given.');
         }
 
         /** @var IRPGServer $package */
@@ -61,7 +59,7 @@ class SoftInitEvent extends Event
     /**
      * @return string
      */
-    public function getPackageClass() : string
+    public function getPackageClass(): string
     {
         return $this->package;
     }

@@ -11,8 +11,34 @@ use ZloyNick\RPGLib\player\BasePlayer;
 class BaseRPGServer implements IRPGServer
 {
 
+    /** @var null|string */
+    private static $playerClass = null;
     /** @var null|RPGServerLoader */
     private $serverLoader = null;
+
+    /**
+     * BaseRPGServer constructor.
+     * @param RPGServerLoader $loader
+     */
+    public function __construct(RPGServerLoader $loader)
+    {
+        $this->serverLoader = $loader;
+    }
+
+    public static function getPlayerClass(): string
+    {
+        return static::$playerClass;
+    }
+
+    public static function setPlayerClass(string $class): bool
+    {
+        $ev = new PlayerClassChangeEvent($class);
+        $ev->call();
+        if ($ev->isCancelled() && static::$playerClass != null)
+            return false;
+
+        static::$playerClass = $ev->getPlayerClass();
+    }
 
     /**
      * @inheritDoc
@@ -44,42 +70,5 @@ class BaseRPGServer implements IRPGServer
     public function close(): void
     {
         // TODO: Implement close() method.
-    }
-
-    /**
-     * BaseRPGServer constructor.
-     * @param RPGServerLoader $loader
-     */
-    public function __construct(RPGServerLoader $loader)
-    {
-        $this->serverLoader = $loader;
-    }
-
-
-
-
-
-
-
-
-
-
-
-    /** @var null|string */
-    private static $playerClass = null;
-
-    public static function getPlayerClass() : string
-    {
-        return static::$playerClass;
-    }
-
-    public static function setPlayerClass(string $class) : bool
-    {
-        $ev = new PlayerClassChangeEvent($class);
-        $ev->call();
-        if($ev->isCancelled() && static::$playerClass != null)
-            return false;
-
-        static::$playerClass = $ev->getPlayerClass();
     }
 }

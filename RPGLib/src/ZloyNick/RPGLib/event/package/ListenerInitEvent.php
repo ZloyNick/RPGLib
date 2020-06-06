@@ -8,7 +8,6 @@ use pocketmine\event\Event;
 use pocketmine\event\Listener;
 use ZloyNick\RPGLib\error\event\EventException;
 use ZloyNick\RPGLib\interfaces\main\IRPGServer;
-
 use function get_class;
 use function is_subclass_of;
 
@@ -31,7 +30,7 @@ class ListenerInitEvent extends Event
      * @param Listener $package
      * @throws EventException
      */
-    public function setListener(Listener $package) : void
+    public function setListener(Listener $package): void
     {
         $this->setListenerClass(get_class($package));
     }
@@ -42,11 +41,10 @@ class ListenerInitEvent extends Event
      * @param string $className
      * @throws EventException
      */
-    public function setListenerClass(string $className) : void
+    public function setListenerClass(string $className): void
     {
-        if(!is_subclass_of(Listener::class, $className))
-        {
-            throw new EventException('Parameter 1 of function SoftInitEvent::setPackageClass() must be instance of '.get_class(Listener::class).'!\n'.$className.' given.');
+        if (!is_subclass_of(Listener::class, $className)) {
+            throw new EventException('Parameter 1 of function SoftInitEvent::setPackageClass() must be instance of ' . get_class(Listener::class) . '!\n' . $className . ' given.');
         }
 
         /** @var IRPGServer $package */
@@ -56,7 +54,7 @@ class ListenerInitEvent extends Event
     /**
      * @return string
      */
-    public function getListenerClass() : string
+    public function getListenerClass(): string
     {
         return $this->listener;
     }

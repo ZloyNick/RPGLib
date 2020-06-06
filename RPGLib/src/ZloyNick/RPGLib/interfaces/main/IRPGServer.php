@@ -18,7 +18,7 @@ interface IRPGServer
      *
      * @return void
      */
-    public function load() : void;
+    public function load(): void;
 
     /**
      * Initialises configuration files.
@@ -27,7 +27,7 @@ interface IRPGServer
      * @return bool
      * @throws RpgException
      */
-    public function init() : bool;
+    public function init(): bool;
 
     /**
      * Final step of starting RPGServer
@@ -35,13 +35,13 @@ interface IRPGServer
      *
      * @return void
      */
-    public function start() : void;
+    public function start(): void;
 
     /**
      * Disabling RPGServer
      *
      * @return void
      */
-    public function close() : void;
+    public function close(): void;
 
 }

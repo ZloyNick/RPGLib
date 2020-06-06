@@ -39,11 +39,10 @@ class PlayerClassChangeEvent extends Event implements Cancellable
      * @param string $className
      * @throws EventException
      */
-    public function setPlayerClass(string $className) : void
+    public function setPlayerClass(string $className): void
     {
-        if(!is_subclass_of(IPlayer::class, $className))
-        {
-            throw new EventException('Parameter 1 of function SoftInitEvent::setPackageClass() must be instance of '.get_class(IPlayer::class).'!\n'.$className.' given.');
+        if (!is_subclass_of(IPlayer::class, $className)) {
+            throw new EventException('Parameter 1 of function SoftInitEvent::setPackageClass() must be instance of ' . get_class(IPlayer::class) . '!\n' . $className . ' given.');
         }
 
         /** @var IPlayer $package */
@@ -53,7 +52,7 @@ class PlayerClassChangeEvent extends Event implements Cancellable
     /**
      * @return string
      */
-    public function getPlayerClass() : string
+    public function getPlayerClass(): string
     {
         return $this->player;
     }

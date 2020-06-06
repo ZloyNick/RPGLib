@@ -17,11 +17,19 @@ class RPGServerLoader extends LoaderBase
     private $software = null;
 
     /**
+     * @return RPGServerLoader
+     */
+    public static function main(): RPGServerLoader
+    {
+        return static::$main;
+    }
+
+    /**
      * Plugin enabling
      *
      * @return void
      */
-    public function onEnable() : void
+    public function onEnable(): void
     {
         static::$main = $this;
 
@@ -35,7 +43,7 @@ class RPGServerLoader extends LoaderBase
     /**
      * @return IRPGServer
      */
-    public function getRPG() : IRPGServer
+    public function getRPG(): IRPGServer
     {
         return $this->software;
     }
@@ -45,7 +53,7 @@ class RPGServerLoader extends LoaderBase
      *
      * @return void
      */
-    public function onDisable() : void
+    public function onDisable(): void
     {
         $this->software->close();
     }

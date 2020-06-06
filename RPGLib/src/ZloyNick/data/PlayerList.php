@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace ZloyNick\data;
 
 use pocketmine\Player as PocketMine_PLayer;
-
 use ZloyNick\RPGLib\interfaces\player\IPlayer;
 use ZloyNick\RPGLib\main\BaseRPGServer;
 use function strtolower;
@@ -19,7 +18,7 @@ final class PlayerList
      * @param string $name
      * @return IPlayer|null
      */
-    public static function getPlayer(string $name) : ?IPlayer
+    public static function getPlayer(string $name): ?IPlayer
     {
         return
             isset(static::$list[$lName = strtolower($name)]) ? static::$list[$lName] : null;
@@ -28,7 +27,7 @@ final class PlayerList
     /**
      * @param PocketMine_PLayer $player
      */
-    public static function addPlayer(PocketMine_PLayer $player) : void
+    public static function addPlayer(PocketMine_PLayer $player): void
     {
         $class = BaseRPGServer::getPlayerClass();
         /** @var IPlayer $player */

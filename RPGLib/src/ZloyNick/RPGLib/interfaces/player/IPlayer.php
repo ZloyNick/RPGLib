@@ -23,16 +23,16 @@ abstract class IPlayer
         $this->personage_Holder = $player;
     }
 
+    public function init(): void
+    {
+        static::initAttributes();
+    }
+
     /**
      * Player's attributes initialize
      *
      * @return void
      */
-    abstract protected static function initAttributes() : void;
-
-    public function init() : void
-    {
-        static::initAttributes();
-    }
+    abstract protected static function initAttributes(): void;
 
 }

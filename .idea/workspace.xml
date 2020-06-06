@@ -2,6 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12e58c4a-a5ae-4ca0-8618-f9cbf08b3d0b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/data/LangContainer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/data/config/JSONConfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGLib/resources/lang/ru_lang.json" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/resources/lang/ru_lang.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/error/RpgException.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/error/RpgException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/error/event/EventException.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/error/event/EventException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/event/EventCatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/event/EventCatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/event/package/ListenerInitEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/event/package/ListenerInitEvent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/event/package/PlayerClassChangeEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/event/package/PlayerClassChangeEvent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/event/package/SoftInitEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/event/package/SoftInitEvent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/interfaces/main/IRPGServer.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/interfaces/main/IRPGServer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/interfaces/player/IPlayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/interfaces/player/IPlayer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/main/BaseRPGServer.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/main/BaseRPGServer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/main/RPGServerLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/main/RPGServerLoader.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/data/PlayerList.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/data/PlayerList.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591442023153</updated>
-      <workItem from="1591442024470" duration="9531000" />
+      <workItem from="1591442024470" duration="10821000" />
     </task>
     <servers />
   </component>
@@ -79,9 +93,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="603" y="349" width="354" height="165" key="Github.CreateGistDialog/0.0.1536.864@0.0.1536.864" timestamp="1591442105549" />
-    <state x="597" y="248" key="NewPhpClassDialog" timestamp="1591449125516">
+    <state x="597" y="248" key="NewPhpClassDialog" timestamp="1591452985965">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="597" y="248" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1591449125516" />
+    <state x="597" y="248" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1591452985965" />
   </component>
 </project>
