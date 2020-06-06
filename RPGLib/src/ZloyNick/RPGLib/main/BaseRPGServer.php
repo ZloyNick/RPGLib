@@ -25,19 +25,36 @@ class BaseRPGServer implements IRPGServer
         $this->serverLoader = $loader;
     }
 
+    /**
+     * Return ::class of current IPlayer class
+     *
+     * @return string
+     */
     public static function getPlayerClass(): string
     {
         return static::$playerClass;
     }
 
+    /**
+     * API: You can change class while catching
+     * Or use in your Main RPG class self::setPlayerClass()
+     *
+     * @param string $class
+     * @return bool
+     */
     public static function setPlayerClass(string $class): bool
     {
         $ev = new PlayerClassChangeEvent($class);
         $ev->call();
+
+        //if is set player's ::class
+        //when process will be cancelled if called setCancelled()
+        //else => $playerClass couldn't be empty
         if ($ev->isCancelled() && static::$playerClass != null)
             return false;
 
         static::$playerClass = $ev->getPlayerClass();
+        return true;
     }
 
     /**
