@@ -31,8 +31,9 @@ final class PlayerList
     public static function addPlayer(PocketMine_PLayer $player) : void
     {
         $class = BaseRPGServer::getPlayerClass();
-        static::$list[strtolower($player->getName())] = new $class($player);
-        //TODO: initialise
+        /** @var IPlayer $player */
+        $player = &(static::$list[strtolower($player->getName())] = new $class($player));
+        $player->init();
     }
 
 }

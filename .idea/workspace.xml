@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12e58c4a-a5ae-4ca0-8618-f9cbf08b3d0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/RPGLib/resources/lang/ru_lang.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/event/EventCatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/RPGLib/event/EventCatcher.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RPGLib/src/ZloyNick/data/PlayerList.php" beforeDir="false" afterPath="$PROJECT_DIR$/RPGLib/src/ZloyNick/data/PlayerList.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591442023153</updated>
-      <workItem from="1591442024470" duration="8872000" />
+      <workItem from="1591442024470" duration="9531000" />
     </task>
     <servers />
   </component>
