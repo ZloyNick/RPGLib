@@ -43,7 +43,6 @@ class EventCatcher implements Listener
     {
         if ($this->getPlayerFromObject($player = $event->getPlayer())) {
             $player->close("", LangContainer::getMessage("player-already-logged-in"));
-            $player->close("", "");
             return;
         }
 
